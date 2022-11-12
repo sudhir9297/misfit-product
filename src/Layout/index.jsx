@@ -25,7 +25,7 @@ function Banner() {
 
   return (
     <div ref={banner} className="w-screen h-screen relative bg-[#E9EFEF]">
-      <div className="absolute my-6 ml-56 text-left text-2xl font-bold tracking-widest">
+      <div className="absolute my-6 ml-64 text-left text-2xl font-bold tracking-widest">
         MISFIT.
       </div>
       <div className="w-full h-full flex justify-between items-center">

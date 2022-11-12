@@ -106,7 +106,7 @@ class Canvas extends React.Component {
   loadHDR = () => {
     new RGBELoader(this.manager)
       .setDataType(THREE.HalfFloatType)
-      .load('default.hdr', (texture) => {
+      .load('/default.hdr', (texture) => {
         texture.minFilter = THREE.LinearFilter;
         texture.magFilter = THREE.LinearFilter;
         texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -123,7 +123,7 @@ class Canvas extends React.Component {
       `${THREE_PATH}/examples/js/libs/draco/gltf/`
     );
 
-    const chair = 'chairs.glb';
+    const chair = '/chairs.glb';
     const GLtfLoader = new GLTFLoader(this.manager).setDRACOLoader(
       DRACO_LOADER
     );
@@ -170,8 +170,6 @@ class Canvas extends React.Component {
   render() {
     const { activeData, swatchData, handleSwatchClick } = this.props;
     const { isLoading } = this.state;
-
-    console.log(isLoading);
 
     return (
       <div id="container" className="w-1/2 h-full relative z-10">

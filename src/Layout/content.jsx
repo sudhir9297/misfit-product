@@ -21,9 +21,9 @@ const Content = ({ activeData }) => {
   }, [activeData]);
 
   return (
-    <div className="select-none w-1/2 h-full flex justify-center items-center">
-      <div className=" flex justify-start flex-col items-start mx-20 ">
-        <h1 className="content text-left text-8xl font-bold mb-2">
+    <div className="select-none w-1/2 h-full flex justify-end items-center">
+      <div className=" flex justify-start flex-col items-start ml-20 ">
+        <h1 className="content text-left text-9xl font-bold mb-2">
           Minimalistic
         </h1>
         <h6 className="content text-4xl font-regular mb-8">Style Furniture</h6>
