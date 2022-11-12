@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/misfit-furniture/static/css/main.f9d539d3.css",
-    "main.js": "/misfit-furniture/static/js/main.2b5a86e6.js",
+    "main.css": "/misfit-furniture/static/css/main.b9fb34cc.css",
+    "main.js": "/misfit-furniture/static/js/main.1a8124d2.js",
     "index.html": "/misfit-furniture/index.html",
-    "main.f9d539d3.css.map": "/misfit-furniture/static/css/main.f9d539d3.css.map",
-    "main.2b5a86e6.js.map": "/misfit-furniture/static/js/main.2b5a86e6.js.map"
+    "main.b9fb34cc.css.map": "/misfit-furniture/static/css/main.b9fb34cc.css.map",
+    "main.1a8124d2.js.map": "/misfit-furniture/static/js/main.1a8124d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9d539d3.css",
-    "static/js/main.2b5a86e6.js"
+    "static/css/main.b9fb34cc.css",
+    "static/js/main.1a8124d2.js"
   ]
 }
