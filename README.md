@@ -13,7 +13,7 @@ First remove below line from package.json
 ```
 
 its due to the paths of model and HDR map,
-And Now run below command in my project
+And Now run below command in project
 
 ```bash
   npm install

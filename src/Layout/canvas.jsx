@@ -65,10 +65,10 @@ class Canvas extends React.Component {
     // this.controls.maxDistance = 150;
     // this.controls.minDistance = 100;
     this.controls.enableDamping = true;
-    // this.controls.autoRotate = true;
+    this.controls.autoRotate = true;
     this.controls.autoRotateSpeed = 1.5;
     this.controls.enablePan = false;
-    // this.controls.enableZoom = false;
+    this.controls.enableZoom = false;
     //  this.controls.minPolarAngle = -Math.PI / 2;
     this.controls.maxPolarAngle = Math.PI / 1.9;
 
@@ -172,7 +172,10 @@ class Canvas extends React.Component {
     const { isLoading } = this.state;
 
     return (
-      <div id="container" className="w-1/2 h-full relative z-10">
+      <div
+        id="container"
+        className="w-full h-3/5 relative z-10 lg:w-1/2 lg:h-full "
+      >
         <canvas className="webgl w-full h-full relative z-10"></canvas>
         {isLoading ? <LoadingAnimation /> : null}
 
@@ -181,7 +184,7 @@ class Canvas extends React.Component {
           swatchData={swatchData}
           handleSwatchClick={handleSwatchClick}
         />
-        <div className="highlight w-2/5 h-1/2 bg-[#4A6E6A] absolute inset-x-80 top-0 -z-10 opacity-50 rounded-br-lg rounded-bl-lg"></div>
+        <div className="highlight w-2/5 h-1/2 bg-[#4A6E6A] absolute inset-x-40 top-0 -z-10 opacity-50 rounded-br-lg rounded-bl-lg md:inset-x-60  lg:inset-x-40"></div>
       </div>
     );
   }

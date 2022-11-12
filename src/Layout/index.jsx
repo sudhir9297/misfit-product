@@ -24,17 +24,17 @@ function Banner() {
   }, [activeData]);
 
   return (
-    <div ref={banner} className="w-screen h-screen relative bg-[#E9EFEF]">
-      <div className="absolute my-6 ml-64 text-left text-2xl font-bold tracking-widest">
+    <div ref={banner} className="w-screen h-screen relative">
+      <div className="absolute my-2 ml-6 text-left text-2xl font-bold tracking-widest md:ml-28 ">
         MISFIT.
       </div>
-      <div className="w-full h-full flex justify-between items-center">
-        <Content activeData={activeData} />
+      <div className="w-full h-full flex justify-between items-center flex-col lg:flex-row-reverse">
         <Canvas
           activeData={activeData}
           swatchData={data}
           handleSwatchClick={handleSwatchClick}
         />
+        <Content activeData={activeData} />
       </div>
     </div>
   );
