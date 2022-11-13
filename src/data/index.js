@@ -13,18 +13,6 @@ export const data = [
   },
   {
     id: 2,
-    swatchColor: '#527C92',
-    background: '#BBDBDE',
-    headingColor: '#1F333E',
-    buttonColor: { text: '#fff', background: '#527C92' },
-    itemList: {
-      upholstry: {
-        color: '#527C92',
-      },
-    },
-  },
-  {
-    id: 3,
     swatchColor: '#E6D3C4',
     background: '#9B7C64',
     headingColor: '#000',
@@ -32,6 +20,18 @@ export const data = [
     itemList: {
       upholstry: {
         color: '#E6D3C4',
+      },
+    },
+  },
+  {
+    id: 3,
+    swatchColor: '#527C92',
+    background: '#BBDBDE',
+    headingColor: '#1F333E',
+    buttonColor: { text: '#fff', background: '#527C92' },
+    itemList: {
+      upholstry: {
+        color: '#527C92',
       },
     },
   },

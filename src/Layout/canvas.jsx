@@ -6,7 +6,6 @@ import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import gsap from 'gsap';
 import SwatchWrapper from './swatchWrapper';
-import { LoadingAnimation } from '../components';
 
 class Canvas extends React.Component {
   constructor(props) {
@@ -14,7 +13,6 @@ class Canvas extends React.Component {
     this.state = {
       selectedMesh: {},
       currentScene: null,
-      isLoading: true,
     };
   }
 
@@ -29,6 +27,7 @@ class Canvas extends React.Component {
     this.InitialSetup();
   }
   InitialSetup = () => {
+    const { handleLoading } = this.props;
     this.container = document.getElementById('container');
     const item = document.getElementById('container').getBoundingClientRect();
 
@@ -52,7 +51,7 @@ class Canvas extends React.Component {
     this.manager.onProgress = (url, itemsLoaded, itemsTotal) => {
       const ProgressVal = (itemsLoaded / itemsTotal) * 100;
       if (ProgressVal === 100) {
-        this.setState({ isLoading: false });
+        handleLoading();
       }
     };
 
@@ -106,7 +105,7 @@ class Canvas extends React.Component {
   loadHDR = () => {
     new RGBELoader(this.manager)
       .setDataType(THREE.HalfFloatType)
-      .load('/default.hdr', (texture) => {
+      .load('default.hdr', (texture) => {
         texture.minFilter = THREE.LinearFilter;
         texture.magFilter = THREE.LinearFilter;
         texture.mapping = THREE.EquirectangularReflectionMapping;
@@ -123,7 +122,7 @@ class Canvas extends React.Component {
       `${THREE_PATH}/examples/js/libs/draco/gltf/`
     );
 
-    const chair = '/chairs.glb';
+    const chair = 'chairs.glb';
     const GLtfLoader = new GLTFLoader(this.manager).setDRACOLoader(
       DRACO_LOADER
     );
@@ -177,7 +176,6 @@ class Canvas extends React.Component {
         className="w-full h-3/5 relative z-10 lg:w-1/2 lg:h-full "
       >
         <canvas className="webgl w-full h-full relative z-10"></canvas>
-        {isLoading ? <LoadingAnimation /> : null}
 
         <SwatchWrapper
           activeData={activeData}

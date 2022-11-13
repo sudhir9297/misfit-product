@@ -12,3 +12,28 @@
   text-align: center;
   font-family: 'Satoshi', sans-serif;
 }
+
+.rotation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  font-family: 'Satoshi', sans-serif;
+  background-color: #c7d6ce;
+  display: none;
+}
+
+.rotation p {
+  width: 80%;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) and (max-width: 915px) and (orientation: landscape) {
+  .rotation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

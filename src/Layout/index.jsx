@@ -4,13 +4,20 @@ import Canvas from './canvas';
 import Content from './content';
 import { data } from '../data';
 
+import { LoadingAnimation } from '../components';
+
 function Banner() {
   const banner = useRef();
+  const [isLoading, setIsLoading] = useState(true);
 
   const [activeData, setActiveData] = useState(data[0]);
 
   const handleSwatchClick = (item) => {
     if (activeData.id !== item.id) setActiveData(item);
+  };
+
+  const handleLoading = () => {
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -25,14 +32,20 @@ function Banner() {
 
   return (
     <div ref={banner} className="w-screen h-screen relative">
-      <div className="absolute my-2 ml-6 text-left text-2xl font-bold tracking-widest md:ml-28 ">
+      {isLoading ? <LoadingAnimation /> : null}
+
+      <div className="absolute my-2 ml-6 text-left text-2xl font-bold tracking-widest md:ml-28 lg:ml-[12vw]">
         MISFIT.
+      </div>
+      <div class="rotation">
+        <p>Please Rotate your device to see the Product</p>
       </div>
       <div className="w-full h-full flex justify-between items-center flex-col lg:flex-row-reverse">
         <Canvas
           activeData={activeData}
           swatchData={data}
           handleSwatchClick={handleSwatchClick}
+          handleLoading={handleLoading}
         />
         <Content activeData={activeData} />
       </div>
