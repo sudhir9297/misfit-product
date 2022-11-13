@@ -15,7 +15,7 @@ export const data = [
     id: 2,
     swatchColor: '#E6D3C4',
     background: '#9B7C64',
-    headingColor: '#000',
+    headingColor: '#fff',
     buttonColor: { text: '#000', background: '#E6D3C4' },
     itemList: {
       upholstry: {

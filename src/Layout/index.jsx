@@ -27,6 +27,12 @@ function Banner() {
       duration: 0.8,
     });
 
+    gsap.to('.logo', {
+      color: activeData.headingColor,
+      ease: 'power3.inOut',
+      duration: 0.8,
+    });
+
     return () => {};
   }, [activeData]);
 
@@ -34,7 +40,7 @@ function Banner() {
     <div ref={banner} className="w-screen h-screen relative">
       {isLoading ? <LoadingAnimation /> : null}
 
-      <div className="absolute my-2 ml-6 text-left text-2xl font-bold tracking-widest md:ml-28 lg:ml-[12vw]">
+      <div className="logo absolute my-2 ml-6 text-left text-2xl font-bold tracking-widest md:ml-28 lg:ml-[12vw] lg:my-8">
         MISFIT.
       </div>
       <div class="rotation">

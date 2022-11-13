@@ -65,7 +65,7 @@ class Canvas extends React.Component {
     // this.controls.minDistance = 100;
     this.controls.enableDamping = true;
     this.controls.autoRotate = true;
-    this.controls.autoRotateSpeed = 1.5;
+    this.controls.autoRotateSpeed = 2;
     this.controls.enablePan = false;
     this.controls.enableZoom = false;
     //  this.controls.minPolarAngle = -Math.PI / 2;
@@ -168,8 +168,6 @@ class Canvas extends React.Component {
 
   render() {
     const { activeData, swatchData, handleSwatchClick } = this.props;
-    const { isLoading } = this.state;
-
     return (
       <div
         id="container"
