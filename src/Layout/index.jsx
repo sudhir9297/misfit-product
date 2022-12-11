@@ -8,6 +8,8 @@ import { LoadingAnimation } from '../components';
 
 function Banner() {
   const banner = useRef();
+  const [condition, setCondition] = useState(false);
+
   const [isLoading, setIsLoading] = useState(true);
 
   const [activeData, setActiveData] = useState(data[0]);
@@ -43,7 +45,7 @@ function Banner() {
       <div className="logo absolute my-2 ml-6 text-left text-2xl font-bold tracking-widest md:ml-28 lg:ml-[12vw] lg:my-8">
         MISFIT.
       </div>
-      <div class="rotation">
+      <div className="rotation">
         <p>Please Rotate your device to see the Product</p>
       </div>
       <div className="w-full h-full flex justify-between items-center flex-col lg:flex-row-reverse">
@@ -52,8 +54,13 @@ function Banner() {
           swatchData={data}
           handleSwatchClick={handleSwatchClick}
           handleLoading={handleLoading}
+          condition={condition}
         />
-        <Content activeData={activeData} />
+        <Content
+          activeData={activeData}
+          condition={condition}
+          setCondition={setCondition}
+        />
       </div>
     </div>
   );

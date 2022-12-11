@@ -44,7 +44,7 @@ class Canvas extends React.Component {
       10,
       5000
     );
-    this.camera.position.set(60, 30, 100);
+    this.camera.position.set(150, 20, 100);
     this.scene.add(this.camera);
 
     this.manager = new THREE.LoadingManager();
@@ -122,12 +122,12 @@ class Canvas extends React.Component {
       `${THREE_PATH}/examples/js/libs/draco/gltf/`
     );
 
-    const chair = 'chairs.glb';
+    const chair = 'bag.glb';
     const GLtfLoader = new GLTFLoader(this.manager).setDRACOLoader(
       DRACO_LOADER
     );
     GLtfLoader.load(chair, (gltf) => {
-      gltf.scene.position.set(0, -20, 0);
+      gltf.scene.position.set(0, -30, 0);
       gltf.scene.traverse(function (child) {
         if (child instanceof THREE.Mesh) {
           child.castShadow = true;
@@ -160,14 +160,14 @@ class Canvas extends React.Component {
     });
 
     gsap.to('.highlight', {
-      backgroundColor: data.swatchColor,
+      backgroundColor: data.buttonColor.background,
       ease: 'power3.inOut',
       duration: 0.8,
     });
   };
 
   render() {
-    const { activeData, swatchData, handleSwatchClick } = this.props;
+    const { activeData, swatchData, handleSwatchClick, condition } = this.props;
     return (
       <div
         id="container"
@@ -179,8 +179,9 @@ class Canvas extends React.Component {
           activeData={activeData}
           swatchData={swatchData}
           handleSwatchClick={handleSwatchClick}
+          condition={condition}
         />
-        <div className="highlight w-2/5 h-1/2 bg-[#4A6E6A] absolute inset-x-40 top-0 -z-10 opacity-50 rounded-br-lg rounded-bl-lg md:inset-x-60  lg:inset-x-40"></div>
+        <div className="highlight w-2/5 h-1/2 bg-[#D7B172] absolute inset-x-40 top-0 -z-10 opacity-50 rounded-br-full rounded-bl-full md:inset-x-60  lg:inset-x-40"></div>
       </div>
     );
   }
