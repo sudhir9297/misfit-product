@@ -1,6 +1,6 @@
 Demo: https://sudhir9297.github.io/misfit-product/
 
-![screencapture-localhost-3000-2022-11-12-17_38_11](https://user-images.githubusercontent.com/19578447/201473205-106c70b1-2abf-46c3-b8ca-cc73f22dcdc6.png)
+![misfit-product](https://user-images.githubusercontent.com/19578447/206888725-18004b51-f882-4f6c-bbe3-e1ea8e8eb559.png)
 
 ## Installation
 
