@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/misfit-product/static/css/main.03d02334.css",
-    "main.js": "/misfit-product/static/js/main.4c42285c.js",
+    "main.css": "/misfit-product/static/css/main.1dff7b6e.css",
+    "main.js": "/misfit-product/static/js/main.b48f7525.js",
     "index.html": "/misfit-product/index.html",
-    "main.03d02334.css.map": "/misfit-product/static/css/main.03d02334.css.map",
-    "main.4c42285c.js.map": "/misfit-product/static/js/main.4c42285c.js.map"
+    "main.1dff7b6e.css.map": "/misfit-product/static/css/main.1dff7b6e.css.map",
+    "main.b48f7525.js.map": "/misfit-product/static/js/main.b48f7525.js.map"
   },
   "entrypoints": [
-    "static/css/main.03d02334.css",
-    "static/js/main.4c42285c.js"
+    "static/css/main.1dff7b6e.css",
+    "static/js/main.b48f7525.js"
   ]
 }
