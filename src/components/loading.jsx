@@ -2,7 +2,7 @@ import React from 'react';
 
 function Loading() {
   return (
-    <div className="absolute top-0 left-0 w-full h-full z-30 flex justify-center items-center bg-[#C7D6CE] ">
+    <div className="absolute top-0 left-0 w-full h-full z-30 flex justify-center items-center bg-[#E5E5E5] ">
       <svg
         className="inline mr-2 w-12 h-12 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
         viewBox="0 0 100 101"
