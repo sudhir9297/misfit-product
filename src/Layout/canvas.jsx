@@ -181,7 +181,7 @@ class Canvas extends React.Component {
           handleSwatchClick={handleSwatchClick}
           condition={condition}
         />
-        <div className="highlight w-2/5 h-1/2 bg-[#D7B172] absolute inset-x-40 top-0 -z-10 opacity-50 rounded-br-full rounded-bl-full md:inset-x-60  lg:inset-x-40"></div>
+        <div className="highlight w-2/5 h-1/2 bg-[#D7B172] absolute inset-x-40 top-0 -z-10 rounded-br-full rounded-bl-full md:inset-x-60  lg:inset-x-40"></div>
       </div>
     );
   }
